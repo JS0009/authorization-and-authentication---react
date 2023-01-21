@@ -1,10 +1,9 @@
 import Button from 'react-bootstrap/Button';
 
-function TypesExample() {
+function TypesExample(props) {
   return (
     <>
-      <Button variant="primary">Войти</Button>{' '}
-      <Button variant="primary">Зарегистрироваться</Button>{' '}
+      <Button variant="primary">{props.name}</Button>{' '}
      
     </>
   );

@@ -5,7 +5,8 @@ import TypesExample from './Button/Button';
 function MainPage() {
     return (
         <div>
-            <TypesExample/>
+            <TypesExample name={'Войти'} onClikc={ {}} />
+            <TypesExample name={'Зарегистрироваться'} onClikc={ {}} />
             <div>
                 Routerlar buraya render olacak
                 <Outlet/>
