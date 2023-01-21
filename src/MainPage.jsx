@@ -5,11 +5,10 @@ import TypesExample from './Button/Button';
 function MainPage() {
     return (
         <div style={{
-            disply: 'flex',
-            backgroundColor: 'lightblue',
+            backgroundColor: 'lightslategrey',
             textAlign: 'right',
-            margin:0,
-            position: 'relative',
+            marginTop: 5,
+            borderTop: 50
         }}>
 
             <TypesExample>Войти</TypesExample>
@@ -19,7 +18,9 @@ function MainPage() {
                 textAlign: 'center',
                 border:'200',                
             }}>
-                Routerlar buraya render olacak
+                <p>
+                Введите ваши учетные данные
+                </p>
                 <Outlet/>
             </div>
         </div>

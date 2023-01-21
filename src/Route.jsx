@@ -2,7 +2,7 @@ import React from 'react';
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "./ErrorPage"
 import MainPage from "./MainPage"
-import Inputs from './Inputs';
+import MyInput from './MyInput/MyInput';
 
 const router = createBrowserRouter([
     {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         path:'in',
-        element: <Inputs/>
+        element: <MyInput />
       },
     ],
     }
