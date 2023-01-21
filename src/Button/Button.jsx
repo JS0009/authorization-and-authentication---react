@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 
-function TypesExample(props) {
+function TypesExample({children,...props}) {
   return (
     <>
-      <Button variant="primary">{props.name}</Button>{' '}
+      <Button variant="primary">{children}</Button>{' '}
      
     </>
   );
