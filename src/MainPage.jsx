@@ -1,24 +1,25 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
-import TypesExample from './Button/Button';
 
 function MainPage() {
     return (
         <div style={{
-            backgroundColor: 'lightslategrey',
             textAlign: 'right',
             marginTop: 5,
             borderTop: 50
         }}>
 
-            <TypesExample>Войти</TypesExample>
-            <TypesExample>Зарегистрироваться</TypesExample>
+            <Button>Войти</Button>
+            <Button>Зарегистрироваться</Button>
 
             <div style={{
                 textAlign: 'center',
                 border:'200',                
             }}>
-                <p>
+                <p style={{
+                    backgroundColor: 'lightslategrey',
+                    }}>
                 Введите ваши учетные данные
                 </p>
                 <Outlet/>

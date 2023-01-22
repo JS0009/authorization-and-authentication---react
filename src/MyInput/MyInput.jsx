@@ -1,6 +1,6 @@
 import classes from './MyInput.module.css'
 
-function MyInput(...props) {
+function MyInput(props) {
     return ( 
         <input
             className={classes.myInput} {...props}
