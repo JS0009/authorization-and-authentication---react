@@ -11,11 +11,11 @@ function MainPage() {
             borderTop: 50
         }}>
             <header style={{
-                backgroundColor: 'Window',
+                backgroundColor: '#3E5F8A',
                 padding:15
             }}>
-                <Link style={{margin:0}} to='in'>Зарегистрироваться</Link>
-                <Link style={{margin:5}} to='/in2'> Войти </Link>
+                <Link style={{margin:0, color:'#F5F5DC'}} to='in'>Зарегистрироваться</Link>
+                <Link style={{margin:5, color:'#F5F5DC'}} to='/in2'> Войти </Link>
             </header>
 
             <div style={{
