@@ -7,10 +7,13 @@ function MainPage() {
 
         <div style={{
             textAlign: 'right',
-            marginTop: 20,
+            marginTop: 0,
             borderTop: 50
         }}>
-            <header>
+            <header style={{
+                backgroundColor: 'Window',
+                padding:15
+            }}>
                 <Link style={{margin:0}} to='in'>Зарегистрироваться</Link>
                 <Link style={{margin:5}} to='/in2'> Войти </Link>
             </header>
