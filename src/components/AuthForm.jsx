@@ -4,6 +4,11 @@ import MyInput from "../MyInput/MyInput";
 function AuthForm() {
     return (
         <div>
+            <p style={{
+                    backgroundColor: 'lightslategrey',
+                    }}>
+                Введите ваши учетные данные
+                </p>
         <Form>
             <MyInput placeholder ='Веедите свое имя'/><br />
             <MyInput placeholder ='Веедите свою фамилию'/><br />

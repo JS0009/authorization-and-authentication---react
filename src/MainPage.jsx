@@ -19,11 +19,6 @@ function MainPage() {
                 textAlign: 'center',
                 border:'200',                
             }}>
-                <p style={{
-                    backgroundColor: 'lightslategrey',
-                    }}>
-                Введите ваши учетные данные
-                </p>
                 <Outlet/>
             </div>
         </div>
