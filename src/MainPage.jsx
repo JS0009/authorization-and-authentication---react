@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function MainPage() {
     return (
@@ -10,8 +9,8 @@ function MainPage() {
             borderTop: 50
         }}>
 
-            <Button>Войти</Button>
-            <Button>Зарегистрироваться</Button>
+            <Link style={{margin:0}} to='in'>Зарегистрироваться</Link>
+            <Link style={{margin:5}} to='/in2'> Войти </Link>
 
             <div style={{
                 textAlign: 'center',
