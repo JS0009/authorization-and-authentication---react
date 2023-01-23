@@ -4,13 +4,18 @@ import ErrorPage from "./ErrorPage"
 import MainPage from "./MainPage"
 import AuthForm from './components/AuthForm';
 import Authentication from './components/Authentication';
+import BeginningPage from './components/BeginningPage';
 
 const router = createBrowserRouter([
     {
-    path:'/',
+    path: '/',
     element: <MainPage/>,
     errorElement: <ErrorPage />,
     children: [
+      {
+        index: '/',
+        element: <BeginningPage/>
+      },
       {
         path:'in',
         element: <AuthForm />
