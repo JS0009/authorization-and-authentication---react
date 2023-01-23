@@ -4,7 +4,7 @@ import MyInput from "../MyInput/MyInput";
 function AuthForm() {
     return (
         <div>
-        <Form >
+        <Form>
             <MyInput placeholder ='Веедите свое имя'/><br />
             <MyInput placeholder ='Веедите свою фамилию'/><br />
             <MyInput placeholder ='Веедите свой email'/><br />
