@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function AuthForm() {
 
-    const [name, setName] = useState({
+    const [autho, setAutho] = useState({
         inputName: '',
         inputSurname: '',
         emailInput: '',
@@ -27,30 +27,30 @@ function AuthForm() {
             <Form onSubmit={handleSubmit}>
                 <MyInput
                     type="text" 
-                    value={name.inputName}
-                    onChange={(e) => setName(e.target.value)}
+                    value={autho.inputName}
+                    onChange={(e) => setAutho(e.target.value)}
                     placeholder='Веедите свое имя' /><br />
                 
                 <MyInput
                     type="text" 
-                    value={name.inputSurname}
+                    value={autho.inputSurname}
                     onChange={(e) => setName(e.target.value)}
                     placeholder='Веедите свою фамилию' /><br />
                     
                 <MyInput
-                    value={name.emailInput}
+                    value={autho.emailInput}
                     onChange={(e) => setName(e.target.value)}
                     type='email'
                     placeholder='Веедите свой email' /><br />
                     
                 <MyInput
-                    value={name.newPassword}
+                    value={autho.newPassword}
                     onChange={(e) => setName(e.target.value)}
                     type='password'
                     placeholder='Веедите пароль' /><br />
                     
                 <MyInput
-                    value={name.repeatPassword}
+                    value={autho.repeatPassword}
                     onChange={(e) => setName(e.target.value)}
                     type='password'
                     placeholder='Веедите повторно пароль' /><br />
