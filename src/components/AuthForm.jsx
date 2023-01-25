@@ -14,7 +14,7 @@ function AuthForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`The name you entered was: ${name}`)
+        alert(`The name you entered was: ${autho}`)
   }
     return (
         <div>
@@ -34,24 +34,24 @@ function AuthForm() {
                 <MyInput
                     type="text" 
                     value={autho.inputSurname}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setAutho(e.target.value)}
                     placeholder='Веедите свою фамилию' /><br />
                     
                 <MyInput
                     value={autho.emailInput}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setAutho(e.target.value)}
                     type='email'
                     placeholder='Веедите свой email' /><br />
                     
                 <MyInput
                     value={autho.newPassword}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setAutho(e.target.value)}
                     type='password'
                     placeholder='Веедите пароль' /><br />
                     
                 <MyInput
                     value={autho.repeatPassword}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setAutho(e.target.value)}
                     type='password'
                     placeholder='Веедите повторно пароль' /><br />
                 <Button
