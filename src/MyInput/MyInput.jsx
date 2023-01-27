@@ -1,9 +1,17 @@
 import classes from './MyInput.module.css'
 
 function MyInput(props) {
+
+    const rootClasses = [classes.myInput]
+    if (props.value === '') {
+
+        rootClasses.push(classes.err)
+        
+    }
+
     return ( 
         <input
-            className={classes.myInput} {...props}
+            className={rootClasses.join(` `)} {...props}
         />
      );
 }

@@ -4,20 +4,35 @@ import { useState } from "react";
 
 function AuthForm() {
 
-    const [inputName, setInputName] = useState('')
-    const [inputSurname, setInputSurname] = useState('')
-    const [emailInput, setEmailInput] = useState('')
-    const [newPassword, setNewPassword] = useState('')
-    const [repeatPassword, setRepeatPassword] = useState('')
+    const [inputName, setInputName] = useState()
+    const [inputSurname, setInputSurname] = useState()
+    const [emailInput, setEmailInput] = useState()
+    const [newPassword, setNewPassword] = useState()
+    const [repeatPassword, setRepeatPassword] = useState()
 
     const handleSubmit = (event) => {
+
         event.preventDefault();
-        console.log(`The name you entered was: ${inputName}`)
-        console.log(`The name you entered was: ${inputSurname}`)
-        console.log(`The name you entered was: ${emailInput}`)
-        console.log(`The name you entered was: ${newPassword}`)
-        console.log(`The name you entered was: ${repeatPassword}`)
-  }
+        if (inputName === undefined) {
+            setInputName('')
+        }
+        if (inputSurname === undefined) {
+            setInputSurname('')
+        }
+        if (emailInput === undefined) {
+            setEmailInput('')
+        }
+        if (newPassword === undefined) {
+            setNewPassword('')
+        }
+        if (repeatPassword === undefined) {
+            setRepeatPassword('')
+        }
+        if (newPassword !== repeatPassword) {
+            setRepeatPassword('')
+            alert('Пароли не совпадают')
+        }
+    }
     return (
         <div>
             <p style={{
@@ -28,15 +43,15 @@ function AuthForm() {
             
             <Form onSubmit={handleSubmit}>
                 <MyInput
-                    type="text" 
                     value={inputName}
                     onChange={(e) => setInputName(e.target.value)}
+                    type="text" 
                     placeholder='Веедите свое имя' /><br />
                 
                 <MyInput
-                    type="text" 
                     value={inputSurname}
                     onChange={(e) => setInputSurname(e.target.value)}
+                    type="text" 
                     placeholder='Веедите свою фамилию' /><br />
                     
                 <MyInput
