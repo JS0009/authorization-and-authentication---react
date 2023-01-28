@@ -2,6 +2,10 @@ import { Button, Form } from "react-bootstrap";
 import MyInput from "../MyInput/MyInput";
 
 function Authentication() {
+
+    function singIn(event) {
+        event.preventDefault();
+    }
     return (
         <div>
             <p style={{
@@ -9,7 +13,7 @@ function Authentication() {
                     }}>
                 Введите ваши учетные данные
             </p>
-    <Form>
+    <Form onSubmit={singIn}>
                 <MyInput
                     type='email'
                     placeholder='Веедите свой email' />
@@ -18,7 +22,9 @@ function Authentication() {
                     type='password'
                     placeholder='Веедите пароль' />
                 <br />
-        <Button>Вход в учетную запись</Button>
+                <Button type='sabmit'>
+                    Вход в учетную запись
+                </Button>
     </Form> 
         </div>
      );
