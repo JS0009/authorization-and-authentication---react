@@ -1,6 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import MyInput from "../MyInput/MyInput";
 import { useState } from "react";
+import {useDB}from "../hooks/useDB";
 
 function AuthForm() {
 
@@ -9,9 +10,9 @@ function AuthForm() {
     const [emailInput, setEmailInput] = useState()
     const [newPassword, setNewPassword] = useState()
     const [repeatPassword, setRepeatPassword] = useState()
-
+    
+    
     const handleSubmit = (event) => {
-
         event.preventDefault();
         if (inputName === undefined) {
             setInputName('')
@@ -28,11 +29,18 @@ function AuthForm() {
         if (repeatPassword === undefined) {
             setRepeatPassword('')
         }
-        if (newPassword !== repeatPassword) {
-            setRepeatPassword('')
-            alert('Пароли не совпадают')
-        }
+        
     }
+    
+    const [useDataBase] = useDB (
+        inputName,
+        inputSurname,
+        emailInput,
+        newPassword,
+        repeatPassword,
+        setRepeatPassword
+    )
+
     return (
         <div>
             <p style={{
@@ -40,7 +48,6 @@ function AuthForm() {
                     }}>
                 Введите ваши учетные данные
             </p>
-            
             <Form onSubmit={handleSubmit}>
                 <MyInput
                     value={inputName}
@@ -72,7 +79,7 @@ function AuthForm() {
                     type='password'
                     placeholder='Веедите повторно пароль' /><br />
                 <Button
-                    type='submit'>
+                    type='submit' onClick={useDataBase}>
                     Создать учетную запись
                 </Button>
             </Form>
