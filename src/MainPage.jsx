@@ -15,7 +15,7 @@ function MainPage() {
                 padding:15
             }}>
                 <Link style={{margin:0, color:'#F5F5DC'}} to='in'>Зарегистрироваться</Link>
-                <Link style={{margin:5, color:'#F5F5DC'}} to='/in2'> Войти </Link>
+                <Link style={{margin:5, color:'#F5F5DC'}} to='/in2'>Войти </Link>
             </header>
 
             <div style={{
