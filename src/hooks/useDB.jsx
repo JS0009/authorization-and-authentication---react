@@ -9,15 +9,13 @@ export const useDB = (
 
     function useDataBase() {
         if (newPassword !== repeatPassword) {
-        setRepeatPassword('')
+            setRepeatPassword('')
             alert('Пароли не совпадают')
-        }
-        if (inputName && inputSurname && emailInput && newPassword && repeatPassword !== '') {
+        }else if (inputName && inputSurname && emailInput && newPassword && repeatPassword !== ''){
             alert('поля заполнены правильно')
-            }
-        else{ return alert('поля не заполнены')}
-            
-        
+        } else {
+            alert('поля не заполнены')
+        }
         }
     
     return [useDataBase]
